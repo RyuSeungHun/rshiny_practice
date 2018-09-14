@@ -105,4 +105,3 @@ server <- function(input, output, session) {
 
 # Create a Shiny app object
 shinyApp(ui = ui, server = server)
-  
