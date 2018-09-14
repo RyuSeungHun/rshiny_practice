@@ -5,7 +5,9 @@ load(url("http://s3.amazonaws.com/assets.datacamp.com/production/course_4850/dat
 
 # Define UI for application that plots features of movies
 ui <- fluidPage(
-  
+  titlePanel(
+    'Movie browser, 1970 - 2014',
+    windowTitle = 'Movie'),
   # Sidebar layout with a input and output definitions
   sidebarLayout(
     
@@ -60,8 +62,8 @@ ui <- fluidPage(
          img(src = "https://www.rstudio.com/wp-content/uploads/2014/04/shiny.png", height = "30px"),
          "by",
          img(src = "https://www.rstudio.com/wp-content/uploads/2014/07/RStudio-Logo-Blue-Gray.png", height = "30px"),
-         ".")
-      
+         "."),
+      width = 5
     ),
     
     # Output:
@@ -74,8 +76,9 @@ ui <- fluidPage(
       h5(textOutput("description")), # Fifth level header: Description
       
       h3("Data table"),     # Third level header: Data table
-      DT::dataTableOutput(outputId = "moviestable")
-    )
+      DT::dataTableOutput(outputId = "moviestable"),
+    width = 7
+      )
   )
 )
 
